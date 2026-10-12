@@ -1,4 +1,4 @@
-```yaml
+
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Test and Production CloudFormation Pipeline
 
@@ -9,7 +9,6 @@ Parameters:
     AllowedValues:
       - test
       - production
-    Description: Choose test or production environment
 
 Resources:
   DemoQueue:
@@ -23,8 +22,3 @@ Outputs:
   QueueURL:
     Description: URL of the created SQS queue
     Value: !Ref DemoQueue
-
-  QueueName:
-    Description: Name of the created SQS queue
-    Value: !GetAtt DemoQueue.QueueName
-```
